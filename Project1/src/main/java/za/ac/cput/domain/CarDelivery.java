@@ -6,9 +6,10 @@ public class CarDelivery {
     private String delivBId;
     private String customerId;
 
-   //Private constructors
+    //Private constructors
     private CarDelivery(Builder builder){
         this.delivBId = builder.delivBId;
+        this.carDelivId = builder.carDelivId;
         this.customerId = builder.customerId;
     }
 
@@ -19,17 +20,17 @@ public class CarDelivery {
     public void setCarDelivId(String ID) {this.carDelivId = ID;}
     public String getCustomerId() {return this.customerId;}
     public void setCustomerId(String ID) {this.customerId = ID;}
-    
+
     // To String
 
     @Override
     public String toString() {
-        return "CarDelivery{" +
-                "carDelivId='" + carDelivId + '\'' +
-                ", delivBId='" + delivBId + '\'' +
-                ", customerId='" + customerId + '\'' +
-                '}';
-    }
+        return  "CarDelivery{"+
+        "delivBId='" + delivBId + '\'' +
+        ", carDelivId='" + carDelivId + '\'' +
+        ", customerId='"+ customerId + '\'' +
+        '}';
+}
 
 
     //Builder Set
@@ -44,8 +45,8 @@ public class CarDelivery {
             return this;}
         public Builder setCustomerId(String ID) {this.customerId = ID;
             return this;}
-       
-        private Builder copy(CarDelivery cDelivery){
+
+        public Builder copy(CarDelivery cDelivery){
             this.delivBId = cDelivery.delivBId;
             this.carDelivId = cDelivery.carDelivId;
             this.customerId = cDelivery.customerId;
