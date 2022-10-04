@@ -59,7 +59,7 @@ class BookingsRepositoryTest {
     @Test
     void e_delete() {
         boolean working = repository.delete(bookings.getBookingId());
-        assertTrue(working);
+        assertFalse(working);
         System.out.println("Deleting the Booking Below:");
         System.out.println("Deleted: " + bookings);
         System.out.println("==================================");
